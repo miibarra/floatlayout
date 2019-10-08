@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Creating Responsive Sites</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+header {
+  background-color: rgb(136, 203, 211);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+nav {
+  float: left;
+  width: 15%;
+  height: auto;
+  background: #ccc;
+  padding: 20px;
+  font-family: 'Comfortaa', cursive;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: rgb(94, 202, 235);
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-color: #f1f1f1;
+  height: auto; 
+}
+
+aside {
+  float: right;
+  padding: 10px;
+  width: 25%;
+  background: #ccc;
+  height: auto;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav, article {
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+  article {
+  	width: 50%;
+    height:auto;
+    float: left;
+}
+
+	aside {
+    width: 100%;
+    height: auto
+}
+
+@media (max-width: 600px) {
+  nav, article, aside {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Things that float</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#">Pool Accesories</a></li>
+        <li><a href="#">Feathers</a></li>
+        <li><a href="#">Balloons</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Floating LED art illustrates the quality of NYC's water</h1>
+    <p>Plus POOL Light shows whether or not it's safe to swim.</p>
+    <img src="img02.jpeg" style="max-width:100%;width:auto;height:auto;">
+    <p>You don't have to check a website to find out whether or not New York City's water is 
+    healthy -- for the next few months, you just have to take a look at some art in the water itself. 
+    Playlab, Family New York and Floating Point have debuted a floating art installation, + POOL Light, 
+    that displays the water quality in NYC's East River using LED lights.</p>
+  </article>
+
+  <aside>
+    <h2>Poetry Corner</h2>
+    <h3>Venus</h3>
+    <q>¡Oh, reina rubia! -díjele, mi alma quiere dejar su crisálida
+        y volar hacia a ti, y tus labios de fuego besar;
+        y <b>flotar</b> en el nimbo que derrama en tu frente luz pálida,
+        y en siderales éxtasis no dejarte un momento de amar .
+        El aire de la noche refrescaba la atmósfera cálida.
+        Venus, desde el abismo, me miraba con triste mirar.</q>
+        <br></br>
+        <img src="img03.jpg" style="max-width:100%;width:auto;height:auto;">
+        <br></br>
+    <address>Rubén Darío, Nicaragua</address>
+</aside>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
